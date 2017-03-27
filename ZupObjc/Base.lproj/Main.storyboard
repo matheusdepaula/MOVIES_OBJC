@@ -27,16 +27,6 @@
                                 <string>Title</string>
                             </scopeButtonTitles>
                         </searchBar>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fYg-QX-NGi">
-                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fYg-QX-NGi" id="MLS-wE-71T">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="iY7-Uq-GYE" id="ArL-BB-M0h"/>
                             <outlet property="delegate" destination="iY7-Uq-GYE" id="3Fs-HQ-SnR"/>

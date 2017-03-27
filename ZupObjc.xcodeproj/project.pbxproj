@@ -21,6 +21,8 @@
 		7A686ABE1E896B11005577AD /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7A686AB71E896959005577AD /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7A686AC11E896D53005577AD /* JSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A686AC01E896D53005577AD /* JSONModel.framework */; };
 		7A686AC31E896D59005577AD /* JSONModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7A686AC01E896D53005577AD /* JSONModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7A686AC71E898C77005577AD /* ZUPMoviesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A686AC51E898C77005577AD /* ZUPMoviesCell.m */; };
+		7A686AC81E898C77005577AD /* ZUPMoviesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A686AC61E898C77005577AD /* ZUPMoviesCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,9 @@
 		7A686ABA1E896A64005577AD /* ZUPMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZUPMainController.h; sourceTree = "<group>"; };
 		7A686ABB1E896A64005577AD /* ZUPMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZUPMainController.m; sourceTree = "<group>"; };
 		7A686AC01E896D53005577AD /* JSONModel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSONModel.framework; path = Carthage/Build/iOS/JSONModel.framework; sourceTree = "<group>"; };
+		7A686AC41E898C77005577AD /* ZUPMoviesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZUPMoviesCell.h; sourceTree = "<group>"; };
+		7A686AC51E898C77005577AD /* ZUPMoviesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZUPMoviesCell.m; sourceTree = "<group>"; };
+		7A686AC61E898C77005577AD /* ZUPMoviesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZUPMoviesCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,13 +135,13 @@
 		7A686A771E895CEB005577AD /* ZupObjc */ = {
 			isa = PBXGroup;
 			children = (
-				7A686AB21E895D34005577AD /* Source */,
-				7A686AB11E895D28005577AD /* UI */,
-				7A686A811E895CEB005577AD /* Main.storyboard */,
-				7A686AB01E895D1C005577AD /* Controller */,
 				7A686AAF1E895D02005577AD /* Business */,
 				7A686AAE1E895CF8005577AD /* Model */,
-				7A686A841E895CEB005577AD /* ZupObjc.xcdatamodeld */,
+				7A686AD11E8990E9005577AD /* Xcassets */,
+				7A686AB21E895D34005577AD /* Source */,
+				7A686AB11E895D28005577AD /* UI */,
+				7A686AB01E895D1C005577AD /* Controller */,
+				7A686AD21E899138005577AD /* CoreData */,
 				7A686A781E895CEB005577AD /* Supporting Files */,
 			);
 			path = ZupObjc;
@@ -196,6 +201,9 @@
 		7A686AB11E895D28005577AD /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				7A686AD01E898FEA005577AD /* Search */,
+				7A686A811E895CEB005577AD /* Main.storyboard */,
+				7A686A891E895CEB005577AD /* LaunchScreen.storyboard */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -205,8 +213,6 @@
 			children = (
 				7A686A7B1E895CEB005577AD /* AppDelegate.h */,
 				7A686A7C1E895CEB005577AD /* AppDelegate.m */,
-				7A686A871E895CEB005577AD /* Assets.xcassets */,
-				7A686A891E895CEB005577AD /* LaunchScreen.storyboard */,
 				7A686A8C1E895CEB005577AD /* Info.plist */,
 			);
 			name = Source;
@@ -219,6 +225,32 @@
 				7A686AB71E896959005577AD /* AFNetworking.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A686AD01E898FEA005577AD /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				7A686AC41E898C77005577AD /* ZUPMoviesCell.h */,
+				7A686AC51E898C77005577AD /* ZUPMoviesCell.m */,
+				7A686AC61E898C77005577AD /* ZUPMoviesCell.xib */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		7A686AD11E8990E9005577AD /* Xcassets */ = {
+			isa = PBXGroup;
+			children = (
+				7A686A871E895CEB005577AD /* Assets.xcassets */,
+			);
+			name = Xcassets;
+			sourceTree = "<group>";
+		};
+		7A686AD21E899138005577AD /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				7A686A841E895CEB005577AD /* ZupObjc.xcdatamodeld */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +364,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A686AC81E898C77005577AD /* ZUPMoviesCell.xib in Resources */,
 				7A686A8B1E895CEB005577AD /* LaunchScreen.storyboard in Resources */,
 				7A686A881E895CEB005577AD /* Assets.xcassets in Resources */,
 				7A686A831E895CEB005577AD /* Main.storyboard in Resources */,
@@ -377,6 +410,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A686AC71E898C77005577AD /* ZUPMoviesCell.m in Sources */,
 				7A686A861E895CEB005577AD /* ZupObjc.xcdatamodeld in Sources */,
 				7A686A7D1E895CEB005577AD /* AppDelegate.m in Sources */,
 				7A686ABC1E896A64005577AD /* ZUPMainController.m in Sources */,
@@ -625,6 +659,7 @@
 				7A686AA71E895CEB005577AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7A686AA81E895CEB005577AD /* Build configuration list for PBXNativeTarget "ZupObjcTests" */ = {
 			isa = XCConfigurationList;
@@ -633,6 +668,7 @@
 				7A686AAA1E895CEB005577AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7A686AAB1E895CEB005577AD /* Build configuration list for PBXNativeTarget "ZupObjcUITests" */ = {
 			isa = XCConfigurationList;
@@ -641,6 +677,7 @@
 				7A686AAD1E895CEB005577AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
