@@ -10,4 +10,13 @@
 
 @implementation ZUPMovie
 
++ (JSONKeyMapper *) keyMapper {
+    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{
+                                                                  @"title": @"Title",
+                                                                  @"year": @"Year",
+                                                                  @"type": @"Type",
+                                                                  @"poster": @"Poster"
+                                                                  }];
+}
+
 @end

@@ -23,6 +23,7 @@
 		7A686AC31E896D59005577AD /* JSONModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7A686AC01E896D53005577AD /* JSONModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7A686AC71E898C77005577AD /* ZUPMoviesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A686AC51E898C77005577AD /* ZUPMoviesCell.m */; };
 		7A686AC81E898C77005577AD /* ZUPMoviesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A686AC61E898C77005577AD /* ZUPMoviesCell.xib */; };
+		7A686AD51E8992D8005577AD /* ZUPMovieBusinessService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A686AD41E8992D8005577AD /* ZUPMovieBusinessService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,8 @@
 		7A686AC41E898C77005577AD /* ZUPMoviesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZUPMoviesCell.h; sourceTree = "<group>"; };
 		7A686AC51E898C77005577AD /* ZUPMoviesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZUPMoviesCell.m; sourceTree = "<group>"; };
 		7A686AC61E898C77005577AD /* ZUPMoviesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZUPMoviesCell.xib; sourceTree = "<group>"; };
+		7A686AD31E8992D8005577AD /* ZUPMovieBusinessService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZUPMovieBusinessService.h; sourceTree = "<group>"; };
+		7A686AD41E8992D8005577AD /* ZUPMovieBusinessService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZUPMovieBusinessService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +188,8 @@
 		7A686AAF1E895D02005577AD /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				7A686AD31E8992D8005577AD /* ZUPMovieBusinessService.h */,
+				7A686AD41E8992D8005577AD /* ZUPMovieBusinessService.m */,
 			);
 			name = Business;
 			sourceTree = "<group>";
@@ -317,6 +322,7 @@
 		7A686A6D1E895CEB005577AD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = ZUP;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Matheus Pereira de Paula e Sousa";
 				TargetAttributes = {
@@ -410,6 +416,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A686AD51E8992D8005577AD /* ZUPMovieBusinessService.m in Sources */,
 				7A686AC71E898C77005577AD /* ZUPMoviesCell.m in Sources */,
 				7A686A861E895CEB005577AD /* ZupObjc.xcdatamodeld in Sources */,
 				7A686A7D1E895CEB005577AD /* AppDelegate.m in Sources */,

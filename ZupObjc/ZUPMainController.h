@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZUPMainController : UITableViewController
+@interface ZUPMainController : UITableViewController <UISearchBarDelegate>
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end

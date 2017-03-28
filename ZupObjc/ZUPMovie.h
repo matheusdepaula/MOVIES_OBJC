@@ -12,18 +12,18 @@
 @interface ZUPMovie : JSONModel
 
 @property (nonatomic) NSString *title;
-@property (nonatomic) NSInteger *year;
+@property (nonatomic) NSNumber <Optional> *year;
 @property (nonatomic) NSString *imdbID;
-@property (nonatomic) NSString *type;
-@property (nonatomic) NSString *released;
-@property (nonatomic) NSInteger *runtime;
-@property (nonatomic) NSString *director;
-@property (nonatomic) NSString *writer;
-@property (nonatomic) NSString *actors;
-@property (nonatomic) NSString *country;
-@property (nonatomic) NSString *awards;
-@property (nonatomic) float *imdbRatting;
-@property (nonatomic) NSInteger *imdbVotes;
-@property (nonatomic) NSString *urlImage;
+@property (nonatomic) NSString <Optional> *type;
+@property (nonatomic) NSString <Optional> *released;
+@property (nonatomic) NSNumber <Optional> *runtime;
+@property (nonatomic) NSString <Optional> *director;
+@property (nonatomic) NSString <Optional> *writer;
+@property (nonatomic) NSString <Optional> *actors;
+@property (nonatomic) NSString <Optional> *country;
+@property (nonatomic) NSString <Optional> *awards;
+@property (nonatomic) NSNumber <Optional> *imdbRatting;
+@property (nonatomic) NSNumber <Optional> *imdbVotes;
+@property (nonatomic) NSString <Optional> *poster;
 
 @end

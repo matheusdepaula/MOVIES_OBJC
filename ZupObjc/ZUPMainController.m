@@ -9,8 +9,13 @@
 #import "ZUPMainController.h"
 #import <AFNetworking/AFNetworking.h>
 #import "ZUPMoviesCell.h"
+#import "ZUPMovie.h"
+#import "ZUPMovieBusinessService.h"
 
 @interface ZUPMainController ()
+
+@property (nonatomic) NSMutableArray<ZUPMovie*> *movies;
+@property (nonatomic) NSMutableArray *moviesCells;
 
 @end
 
@@ -19,6 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.searchBar.delegate = self;
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,14 +40,11 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return [self.movies count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    ZUPMoviesCell *cell = [ZUPMoviesCell new];
-    
-    return cell;
+    return [self.moviesCells objectAtIndex:indexPath.row];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -53,6 +57,76 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 1.0;
+}
+
+#pragma mark - Movie Cells 
+
+- (void) getMoviesCells {
+    
+    self.moviesCells = [NSMutableArray new];
+    
+    for (ZUPMovie *actualMovie in self.movies) {
+        
+        ZUPMoviesCell *cell = [ZUPMoviesCell new];
+    
+        cell.movieName.text = [NSString stringWithFormat:@"%@ (%ld)", actualMovie.title, [actualMovie.year integerValue]];
+        
+        UIActivityIndicatorView *progressIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle: UIActivityIndicatorViewStyleGray];
+        
+        [progressIndicator startAnimating];
+        progressIndicator.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
+        progressIndicator.frame = cell.moviePoster.frame;
+        
+        [cell.moviePoster addSubview:progressIndicator];
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            
+            UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:actualMovie.poster]]];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                [cell.moviePoster setImage: image];
+                [progressIndicator stopAnimating];
+                
+            });
+            
+        });
+        
+        [self.moviesCells addObject:cell];
+    }
+    
+    [self.tableView reloadData];
+}
+
+#pragma mark - Search Bar Delegate
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+    
+    searchBar.text = @"";
+    [self.view endEditing:YES];
+
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    
+    [self.view endEditing:YES];
+    NSString *textToSearch = [searchBar.text stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    
+    [ZUPMovieBusinessService getMovieWithTitle:textToSearch callback:^(NSString *error, NSMutableArray *response) {
+        
+        if (!error) {
+            
+            self.movies = [[NSMutableArray alloc] initWithArray:response];
+            [self getMoviesCells];
+        
+        } else {
+            
+            UIAlertController *alertError = [UIAlertController alertControllerWithTitle:@"Erro" message:error preferredStyle:UIAlertControllerStyleAlert];
+            [self presentViewController:alertError animated:YES completion:nil];
+            
+        }
+    }];
+    
 }
 
 @end
