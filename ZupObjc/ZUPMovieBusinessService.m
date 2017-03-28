@@ -8,14 +8,14 @@
 
 #import <AFNetworking/AFNetworking.h>
 #import "ZUPMovieBusinessService.h"
-#import "ZUPMovie.h"
 
-#define BASE_URL "http://www.omdbapi.com/?s=%@"
+#define MOVIE_BASE_URL "http://www.omdbapi.com/?s=%@"
+#define MOVIE_DETAIL_BASE_URL "http://www.omdbapi.com/?i=%@"
 
 @implementation ZUPMovieBusinessService
 
 + (void) getMovieWithTitle: (NSString *) movieTitle callback:(void (^)(NSString *error, NSMutableArray* response))callback {
-    NSString *urlString = [NSString stringWithFormat:@BASE_URL, movieTitle];
+    NSString *urlString = [NSString stringWithFormat:@MOVIE_BASE_URL, movieTitle];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
     [manager GET:urlString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -39,8 +39,24 @@
     }];
 }
 
-+ (void) getMoviePosterWithUrl: (NSString *) posterUrl callback:(void (^)(NSString *error, NSMutableArray* response))callback {
++ (void) getMovieDetailWithID: (NSString *) imdbID callback:(void (^)(NSString *error, ZUPMovie* response))callback {
     
+    NSString *urlString = [NSString stringWithFormat:@MOVIE_DETAIL_BASE_URL, imdbID];
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    [manager GET:urlString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        ZUPMovie *movie = [[ZUPMovie alloc] initWithDictionary:responseObject error:nil];
+        
+        callback (nil, movie);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        callback(error.description, nil);
+        
+    }];
+
 }
 
 @end

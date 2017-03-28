@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ZUPMovie.h"
 
 @interface ZUPMovieBusinessService : NSObject
 
 + (void) getMovieWithTitle: (NSString *) movieTitle callback:(void (^)(NSString *error, NSMutableArray* response))callback;
-+ (void) getMoviePosterWithUrl: (NSString *) posterUrl callback:(void (^)(NSString *error, NSMutableArray* response)) callback;
++ (void) getMovieDetailWithID: (NSString *) imdbID callback:(void (^)(NSString *error, ZUPMovie* response))callback;
 
 @end

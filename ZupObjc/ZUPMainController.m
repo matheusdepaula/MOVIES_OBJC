@@ -59,6 +59,16 @@
     return 1.0;
 }
 
+#pragma mark - Table View Delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [ZUPMovieBusinessService getMovieDetailWithID:[self.movies objectAtIndex:indexPath.row].imdbID callback:^(NSString *error, ZUPMovie *response) {
+        
+    }];
+    
+}
+
 #pragma mark - Movie Cells 
 
 - (void) getMoviesCells {

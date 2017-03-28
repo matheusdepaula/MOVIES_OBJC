@@ -15,6 +15,13 @@
                                                                   @"title": @"Title",
                                                                   @"year": @"Year",
                                                                   @"type": @"Type",
+                                                                  @"released": @"Released",
+                                                                  @"runtime": @"Runtime",
+                                                                  @"director": @"Director",
+                                                                  @"writer": @"Writer",
+                                                                  @"actors": @"Actors",
+                                                                  @"country": @"Country",
+                                                                  @"awards": @"Awards",
                                                                   @"poster": @"Poster"
                                                                   }];
 }

@@ -22,7 +22,7 @@
 @property (nonatomic) NSString <Optional> *actors;
 @property (nonatomic) NSString <Optional> *country;
 @property (nonatomic) NSString <Optional> *awards;
-@property (nonatomic) NSNumber <Optional> *imdbRatting;
+@property (nonatomic) NSNumber <Optional> *imdbRating;
 @property (nonatomic) NSNumber <Optional> *imdbVotes;
 @property (nonatomic) NSString <Optional> *poster;
 
