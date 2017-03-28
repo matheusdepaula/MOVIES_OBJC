@@ -24,6 +24,11 @@
 		7A686AC71E898C77005577AD /* ZUPMoviesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A686AC51E898C77005577AD /* ZUPMoviesCell.m */; };
 		7A686AC81E898C77005577AD /* ZUPMoviesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A686AC61E898C77005577AD /* ZUPMoviesCell.xib */; };
 		7A686AD51E8992D8005577AD /* ZUPMovieBusinessService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A686AD41E8992D8005577AD /* ZUPMovieBusinessService.m */; };
+		7A686B0B1E8AD7F5005577AD /* ZUPMovieDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A686B0A1E8AD7F5005577AD /* ZUPMovieDetailsController.m */; };
+		7A686B0F1E8AD869005577AD /* ZUPMovieDetailsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A686B0E1E8AD869005577AD /* ZUPMovieDetailsCell.m */; };
+		7A686B121E8AD879005577AD /* ZUPMovieImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A686B111E8AD879005577AD /* ZUPMovieImageCell.m */; };
+		7A686B171E8AF54D005577AD /* Movie+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A686B141E8AF54D005577AD /* Movie+CoreDataClass.m */; };
+		7A686B181E8AF54D005577AD /* Movie+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A686B161E8AF54D005577AD /* Movie+CoreDataProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +90,16 @@
 		7A686AC61E898C77005577AD /* ZUPMoviesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZUPMoviesCell.xib; sourceTree = "<group>"; };
 		7A686AD31E8992D8005577AD /* ZUPMovieBusinessService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZUPMovieBusinessService.h; sourceTree = "<group>"; };
 		7A686AD41E8992D8005577AD /* ZUPMovieBusinessService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZUPMovieBusinessService.m; sourceTree = "<group>"; };
+		7A686B091E8AD7F5005577AD /* ZUPMovieDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZUPMovieDetailsController.h; sourceTree = "<group>"; };
+		7A686B0A1E8AD7F5005577AD /* ZUPMovieDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZUPMovieDetailsController.m; sourceTree = "<group>"; };
+		7A686B0D1E8AD869005577AD /* ZUPMovieDetailsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZUPMovieDetailsCell.h; sourceTree = "<group>"; };
+		7A686B0E1E8AD869005577AD /* ZUPMovieDetailsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZUPMovieDetailsCell.m; sourceTree = "<group>"; };
+		7A686B101E8AD879005577AD /* ZUPMovieImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZUPMovieImageCell.h; sourceTree = "<group>"; };
+		7A686B111E8AD879005577AD /* ZUPMovieImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZUPMovieImageCell.m; sourceTree = "<group>"; };
+		7A686B131E8AF54D005577AD /* Movie+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Movie+CoreDataClass.h"; path = "../Movie+CoreDataClass.h"; sourceTree = "<group>"; };
+		7A686B141E8AF54D005577AD /* Movie+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Movie+CoreDataClass.m"; path = "../Movie+CoreDataClass.m"; sourceTree = "<group>"; };
+		7A686B151E8AF54D005577AD /* Movie+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Movie+CoreDataProperties.h"; path = "../Movie+CoreDataProperties.h"; sourceTree = "<group>"; };
+		7A686B161E8AF54D005577AD /* Movie+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Movie+CoreDataProperties.m"; path = "../Movie+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,8 +212,8 @@
 		7A686AB01E895D1C005577AD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7A686ABA1E896A64005577AD /* ZUPMainController.h */,
-				7A686ABB1E896A64005577AD /* ZUPMainController.m */,
+				7A686B081E8AD7D9005577AD /* Movie Details */,
+				7A686B071E8AD7D1005577AD /* Movie Search */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -206,7 +221,8 @@
 		7A686AB11E895D28005577AD /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				7A686AD01E898FEA005577AD /* Search */,
+				7A686B0C1E8AD84A005577AD /* Movie Details */,
+				7A686AD01E898FEA005577AD /* Movie Search */,
 				7A686A811E895CEB005577AD /* Main.storyboard */,
 				7A686A891E895CEB005577AD /* LaunchScreen.storyboard */,
 			);
@@ -232,14 +248,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7A686AD01E898FEA005577AD /* Search */ = {
+		7A686AD01E898FEA005577AD /* Movie Search */ = {
 			isa = PBXGroup;
 			children = (
 				7A686AC41E898C77005577AD /* ZUPMoviesCell.h */,
 				7A686AC51E898C77005577AD /* ZUPMoviesCell.m */,
 				7A686AC61E898C77005577AD /* ZUPMoviesCell.xib */,
 			);
-			name = Search;
+			name = "Movie Search";
 			sourceTree = "<group>";
 		};
 		7A686AD11E8990E9005577AD /* Xcassets */ = {
@@ -254,8 +270,49 @@
 			isa = PBXGroup;
 			children = (
 				7A686A841E895CEB005577AD /* ZupObjc.xcdatamodeld */,
+				7A686B191E8AF55E005577AD /* Entity */,
 			);
 			name = CoreData;
+			sourceTree = "<group>";
+		};
+		7A686B071E8AD7D1005577AD /* Movie Search */ = {
+			isa = PBXGroup;
+			children = (
+				7A686ABA1E896A64005577AD /* ZUPMainController.h */,
+				7A686ABB1E896A64005577AD /* ZUPMainController.m */,
+			);
+			name = "Movie Search";
+			sourceTree = "<group>";
+		};
+		7A686B081E8AD7D9005577AD /* Movie Details */ = {
+			isa = PBXGroup;
+			children = (
+				7A686B091E8AD7F5005577AD /* ZUPMovieDetailsController.h */,
+				7A686B0A1E8AD7F5005577AD /* ZUPMovieDetailsController.m */,
+			);
+			name = "Movie Details";
+			sourceTree = "<group>";
+		};
+		7A686B0C1E8AD84A005577AD /* Movie Details */ = {
+			isa = PBXGroup;
+			children = (
+				7A686B0D1E8AD869005577AD /* ZUPMovieDetailsCell.h */,
+				7A686B0E1E8AD869005577AD /* ZUPMovieDetailsCell.m */,
+				7A686B101E8AD879005577AD /* ZUPMovieImageCell.h */,
+				7A686B111E8AD879005577AD /* ZUPMovieImageCell.m */,
+			);
+			name = "Movie Details";
+			sourceTree = "<group>";
+		};
+		7A686B191E8AF55E005577AD /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				7A686B131E8AF54D005577AD /* Movie+CoreDataClass.h */,
+				7A686B141E8AF54D005577AD /* Movie+CoreDataClass.m */,
+				7A686B151E8AF54D005577AD /* Movie+CoreDataProperties.h */,
+				7A686B161E8AF54D005577AD /* Movie+CoreDataProperties.m */,
+			);
+			name = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -420,9 +477,14 @@
 				7A686AC71E898C77005577AD /* ZUPMoviesCell.m in Sources */,
 				7A686A861E895CEB005577AD /* ZupObjc.xcdatamodeld in Sources */,
 				7A686A7D1E895CEB005577AD /* AppDelegate.m in Sources */,
+				7A686B181E8AF54D005577AD /* Movie+CoreDataProperties.m in Sources */,
 				7A686ABC1E896A64005577AD /* ZUPMainController.m in Sources */,
+				7A686B171E8AF54D005577AD /* Movie+CoreDataClass.m in Sources */,
 				7A686A7A1E895CEB005577AD /* main.m in Sources */,
 				7A686AB51E895D80005577AD /* ZUPMovie.m in Sources */,
+				7A686B0B1E8AD7F5005577AD /* ZUPMovieDetailsController.m in Sources */,
+				7A686B121E8AD879005577AD /* ZUPMovieImageCell.m in Sources */,
+				7A686B0F1E8AD869005577AD /* ZUPMovieDetailsCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

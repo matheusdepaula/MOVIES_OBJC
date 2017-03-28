@@ -11,11 +11,13 @@
 #import "ZUPMoviesCell.h"
 #import "ZUPMovie.h"
 #import "ZUPMovieBusinessService.h"
+#import "ZUPMovieDetailsController.h"
 
 @interface ZUPMainController ()
 
 @property (nonatomic) NSMutableArray<ZUPMovie*> *movies;
 @property (nonatomic) NSMutableArray *moviesCells;
+@property (nonatomic) NSMutableDictionary <NSString*, UIImage *> *movieImages;
 
 @end
 
@@ -63,9 +65,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    [ZUPMovieBusinessService getMovieDetailWithID:[self.movies objectAtIndex:indexPath.row].imdbID callback:^(NSString *error, ZUPMovie *response) {
-        
-    }];
+    [self performSegueWithIdentifier:@"movieDetails" sender:indexPath];
     
 }
 
@@ -74,6 +74,7 @@
 - (void) getMoviesCells {
     
     self.moviesCells = [NSMutableArray new];
+    self.movieImages = [NSMutableDictionary new];
     
     for (ZUPMovie *actualMovie in self.movies) {
         
@@ -96,6 +97,7 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 
                 [cell.moviePoster setImage: image];
+                [self.movieImages setObject:image forKey:actualMovie.imdbID];
                 [progressIndicator stopAnimating];
                 
             });
@@ -136,6 +138,25 @@
             
         }
     }];
+    
+}
+
+#pragma mark - Segue
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier isEqualToString: @"movieDetails"]) {
+        
+        ZUPMovieDetailsController *vc = segue.destinationViewController;
+        
+        NSIndexPath *indexSelected = sender;
+        NSString *imdbID = [self.movies objectAtIndex:indexSelected.row].imdbID;
+        
+        vc.imdbID = imdbID;
+        vc.moviePoster = [self.movieImages objectForKey:imdbID];
+        vc.movieTitle = [self.movies objectAtIndex:indexSelected.row].title;
+        
+    }
     
 }
 

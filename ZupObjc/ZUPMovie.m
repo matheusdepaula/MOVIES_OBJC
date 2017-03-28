@@ -20,6 +20,7 @@
                                                                   @"director": @"Director",
                                                                   @"writer": @"Writer",
                                                                   @"actors": @"Actors",
+                                                                  @"plot": @"Plot",
                                                                   @"country": @"Country",
                                                                   @"awards": @"Awards",
                                                                   @"poster": @"Poster"

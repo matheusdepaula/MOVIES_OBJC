@@ -20,6 +20,7 @@
 @property (nonatomic) NSString <Optional> *director;
 @property (nonatomic) NSString <Optional> *writer;
 @property (nonatomic) NSString <Optional> *actors;
+@property (nonatomic) NSString <Optional> *plot;
 @property (nonatomic) NSString <Optional> *country;
 @property (nonatomic) NSString <Optional> *awards;
 @property (nonatomic) NSNumber <Optional> *imdbRating;
