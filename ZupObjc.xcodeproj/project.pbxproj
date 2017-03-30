@@ -28,6 +28,8 @@
 		7A686B0F1E8AD869005577AD /* ZUPMovieDetailsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A686B0E1E8AD869005577AD /* ZUPMovieDetailsCell.m */; };
 		7A686B121E8AD879005577AD /* ZUPMovieImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A686B111E8AD879005577AD /* ZUPMovieImageCell.m */; };
 		7A686B1F1E8AF614005577AD /* Movie+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A686B1D1E8AF614005577AD /* Movie+CoreDataProperties.m */; };
+		7AD3364C1E8D8A95006C8075 /* MyMovies.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AD3364B1E8D8A95006C8075 /* MyMovies.storyboard */; };
+		7AD3364E1E8D8B9C006C8075 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AD3364D1E8D8B9C006C8075 /* Settings.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +101,8 @@
 		7A686B1B1E8AF614005577AD /* Movie+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Movie+CoreDataClass.m"; sourceTree = "<group>"; };
 		7A686B1C1E8AF614005577AD /* Movie+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Movie+CoreDataProperties.h"; sourceTree = "<group>"; };
 		7A686B1D1E8AF614005577AD /* Movie+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Movie+CoreDataProperties.m"; sourceTree = "<group>"; };
+		7AD3364B1E8D8A95006C8075 /* MyMovies.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyMovies.storyboard; sourceTree = "<group>"; };
+		7AD3364D1E8D8B9C006C8075 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,8 +226,10 @@
 			children = (
 				7A686B0C1E8AD84A005577AD /* Movie Details */,
 				7A686AD01E898FEA005577AD /* Movie Search */,
-				7A686A811E895CEB005577AD /* Main.storyboard */,
 				7A686A891E895CEB005577AD /* LaunchScreen.storyboard */,
+				7A686A811E895CEB005577AD /* Main.storyboard */,
+				7AD3364B1E8D8A95006C8075 /* MyMovies.storyboard */,
+				7AD3364D1E8D8B9C006C8075 /* Settings.storyboard */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -426,8 +432,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AD3364C1E8D8A95006C8075 /* MyMovies.storyboard in Resources */,
 				7A686AC81E898C77005577AD /* ZUPMoviesCell.xib in Resources */,
 				7A686A8B1E895CEB005577AD /* LaunchScreen.storyboard in Resources */,
+				7AD3364E1E8D8B9C006C8075 /* Settings.storyboard in Resources */,
 				7A686A881E895CEB005577AD /* Assets.xcassets in Resources */,
 				7A686A831E895CEB005577AD /* Main.storyboard in Resources */,
 			);
@@ -629,15 +637,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = FD2KK8MEY3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = ZupObjc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MPPS.ZupObjc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -645,15 +656,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = FD2KK8MEY3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = ZupObjc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MPPS.ZupObjc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

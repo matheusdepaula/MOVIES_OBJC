@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9za-bP-NWo">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Movies-->
+        <scene sceneID="BJw-jH-d01">
+            <objects>
+                <viewController id="adR-s5-9ii" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yk2-4a-OUD"/>
+                        <viewControllerLayoutGuide type="bottom" id="4eg-zW-YPk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wcs-PR-p5h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Movies" image="ic_face" id="74J-TJ-Hg5"/>
+                    <navigationItem key="navigationItem" title="Movies" id="9Bw-bo-ktu"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LQX-NJ-Ast" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2154.4000000000001" y="204.64767616191907"/>
+        </scene>
+        <!--Movies-->
+        <scene sceneID="pEf-HI-ime">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9za-bP-NWo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Movies" image="ic_face" id="iLF-Gg-FdH"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nxb-eJ-4yO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="adR-s5-9ii" kind="relationship" relationship="rootViewController" id="Avv-Ko-S9N"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1V0-7w-XcA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1215.2" y="204.64767616191907"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_face" width="24" height="24"/>
+    </resources>
+</document>
