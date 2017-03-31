@@ -14,4 +14,6 @@
 @property (nonatomic) NSString *imdbID;
 @property (nonatomic) NSString *movieTitle;
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveIcon;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *trashIcon;
 @end

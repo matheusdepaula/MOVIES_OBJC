@@ -26,6 +26,8 @@
     
     self.title = self.movieTitle;
     [self getActualMovie];
+    [self verifyDataBase];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -105,13 +107,39 @@
 
 - (IBAction)saveMovie:(id)sender {
     
-    self.movie.posterData = UIImagePNGRepresentation(self.moviePoster);
-    [ZUPMovieDAO saveMovie:self.movie];
-    
+    if (![ZUPMovieDAO isMovieSaved:self.movie.imdbID]) {
+        
+        self.movie.posterData = UIImagePNGRepresentation(self.moviePoster);
+        [ZUPMovieDAO saveMovie:self.movie];
+        [self.navigationController popViewControllerAnimated:YES];
+
+    }
 }
 
 - (IBAction)dropMovie:(id)sender {
+    
+    if ([ZUPMovieDAO isMovieSaved:self.movie.imdbID]) {
         
+        [ZUPMovieDAO deleteMovie:self.movie.imdbID];
+        [self.navigationController popViewControllerAnimated:YES];
+
+    }
+}
+
+-(void) verifyDataBase {
+    
+    if ([ZUPMovieDAO isMovieSaved:self.imdbID] == NO) {
+        
+        [self.trashIcon setEnabled:NO];
+        [self.saveIcon setEnabled:YES];
+        
+    } else {
+        
+        [self.trashIcon setEnabled:YES];
+        [self.saveIcon setEnabled:NO];
+        
+    }
+    
 }
 
 @end

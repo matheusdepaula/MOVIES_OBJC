@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="815-mf-MOm">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Movie Title-->
+        <scene sceneID="QvN-ba-3NG">
+            <objects>
+                <tableViewController id="815-mf-MOm" customClass="ZUPMovieDetailsController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="121" sectionHeaderHeight="28" sectionFooterHeight="28" id="FzG-Lg-yBm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="imageCell" rowHeight="200" id="cYn-iz-prv" customClass="ZUPMovieImageCell">
+                                <rect key="frame" x="0.0" y="28" width="375" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cYn-iz-prv" id="eIl-eY-0jr">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="batman_poster" translatesAutoresizingMaskIntoConstraints="NO" id="bgi-1x-Gib">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="bgi-1x-Gib" secondAttribute="trailing" id="5FH-YO-eMe"/>
+                                        <constraint firstItem="bgi-1x-Gib" firstAttribute="leading" secondItem="eIl-eY-0jr" secondAttribute="leading" id="PLH-vh-oYz"/>
+                                        <constraint firstAttribute="bottom" secondItem="bgi-1x-Gib" secondAttribute="bottom" id="oGC-Me-fBH"/>
+                                        <constraint firstItem="bgi-1x-Gib" firstAttribute="top" secondItem="eIl-eY-0jr" secondAttribute="top" id="sad-hj-OG9"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="moviePoster" destination="bgi-1x-Gib" id="MLi-hk-egn"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailsCell" rowHeight="197" id="sAd-dB-YuW" customClass="ZUPMovieDetailsCell">
+                                <rect key="frame" x="0.0" y="228" width="375" height="197"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sAd-dB-YuW" id="5wu-x0-HCg">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="197"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="796-8c-8vd">
+                                            <rect key="frame" x="16" y="16" width="343" height="164.5"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="796-8c-8vd" firstAttribute="top" secondItem="5wu-x0-HCg" secondAttribute="top" constant="16" id="8uE-zi-weF"/>
+                                        <constraint firstAttribute="bottom" secondItem="796-8c-8vd" secondAttribute="bottom" constant="16" id="CLB-t0-8Ee"/>
+                                        <constraint firstItem="796-8c-8vd" firstAttribute="leading" secondItem="5wu-x0-HCg" secondAttribute="leading" constant="16" id="O6v-Vh-DEV"/>
+                                        <constraint firstAttribute="trailing" secondItem="796-8c-8vd" secondAttribute="trailing" constant="16" id="qpb-SE-v4W"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="txtView" destination="796-8c-8vd" id="6Su-XA-wg6"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="815-mf-MOm" id="8Xr-zy-Afn"/>
+                            <outlet property="delegate" destination="815-mf-MOm" id="cD2-1m-f52"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Movie Title" id="bdj-7P-cmv">
+                        <rightBarButtonItems>
+                            <barButtonItem image="ic_save" id="5Vb-Nn-SZ8">
+                                <connections>
+                                    <action selector="saveMovie:" destination="815-mf-MOm" id="3iN-9Z-0pD"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="ic_delete" id="PL7-vC-nYv">
+                                <connections>
+                                    <action selector="dropMovie:" destination="815-mf-MOm" id="gHJ-0f-UIZ"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="saveIcon" destination="5Vb-Nn-SZ8" id="3WY-bI-Rdn"/>
+                        <outlet property="trashIcon" destination="PL7-vC-nYv" id="1a9-Jk-6WU"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GCB-Ln-Nzl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5952.8000000000002" y="77.811094452773617"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ge6-j0-2QT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="asS-QO-fcf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="16Q-0k-vOi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="815-mf-MOm" kind="relationship" relationship="rootViewController" id="JFs-8w-Nup"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14f-Bi-Kql" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5013.6000000000004" y="77.811094452773617"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="batman_poster" width="300" height="444"/>
+        <image name="ic_delete" width="24" height="24"/>
+        <image name="ic_save" width="24" height="24"/>
+    </resources>
+</document>

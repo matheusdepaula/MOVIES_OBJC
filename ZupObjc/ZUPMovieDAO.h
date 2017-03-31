@@ -15,5 +15,7 @@
 
 + (void) saveMovie: (ZUPMovie *) movie;
 + (NSMutableArray *) fetchMovies;
++ (void) deleteMovie: (NSString *) imdbID;
++ (BOOL) isMovieSaved: (NSString *) imdbID;
 
 @end

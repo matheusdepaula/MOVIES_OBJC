@@ -4,32 +4,10 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Movies-->
-        <scene sceneID="BJw-jH-d01">
-            <objects>
-                <viewController id="adR-s5-9ii" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="yk2-4a-OUD"/>
-                        <viewControllerLayoutGuide type="bottom" id="4eg-zW-YPk"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="wcs-PR-p5h">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Movies" image="ic_face" id="74J-TJ-Hg5"/>
-                    <navigationItem key="navigationItem" title="Movies" id="9Bw-bo-ktu"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LQX-NJ-Ast" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2154.4000000000001" y="204.64767616191907"/>
-        </scene>
         <!--Movies-->
         <scene sceneID="pEf-HI-ime">
             <objects>
@@ -43,12 +21,42 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="adR-s5-9ii" kind="relationship" relationship="rootViewController" id="Avv-Ko-S9N"/>
+                        <segue destination="SXc-Qn-Yu9" kind="relationship" relationship="rootViewController" id="XXr-5P-XHg"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1V0-7w-XcA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1215.2" y="204.64767616191907"/>
+            <point key="canvasLocation" x="1318" y="198"/>
+        </scene>
+        <!--My Movies-->
+        <scene sceneID="P5B-2f-Vm3">
+            <objects>
+                <tableViewController id="SXc-Qn-Yu9" customClass="ZUPMyMoviesController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="uVq-pd-Tzg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="SXc-Qn-Yu9" id="FqX-92-bzt"/>
+                            <outlet property="delegate" destination="SXc-Qn-Yu9" id="w15-yv-10L"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="My Movies" id="gpT-sF-1J0"/>
+                    <connections>
+                        <segue destination="6Jg-RO-2rU" kind="show" identifier="movieDetails" id="TIh-ev-pyo"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hbr-Ux-4ez" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2143" y="199"/>
+        </scene>
+        <!--MovieDetails-->
+        <scene sceneID="VOV-fd-Co0">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MovieDetails" id="6Jg-RO-2rU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dtz-pQ-qWt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2941" y="208"/>
         </scene>
     </scenes>
     <resources>

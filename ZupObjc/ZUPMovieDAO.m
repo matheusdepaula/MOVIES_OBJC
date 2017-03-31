@@ -78,6 +78,37 @@
     return movies;
 }
 
++ (void) deleteMovie: (NSString *) imdbID {
+    
+    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Movie"];
+    
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"imdbID == %@", imdbID]];
+    
+    NSArray *fetchResult = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    
+    for (NSManagedObject *object in fetchResult) {
+        [managedObjectContext deleteObject:object];
+    }
+    
+}
+
++ (BOOL) isMovieSaved: (NSString *) imdbID {
+    
+    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Movie"];
+    
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"imdbID == %@", imdbID]];
+    
+    NSArray *fetchResult = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    
+    if ([fetchResult count] > 0) {
+        return YES;
+    }
+    
+    return NO;
+}
+
 + (NSManagedObjectContext *)managedObjectContext {
     NSManagedObjectContext *context = nil;
     id delegate = [[UIApplication sharedApplication] delegate];

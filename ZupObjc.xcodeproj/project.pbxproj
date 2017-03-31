@@ -29,6 +29,8 @@
 		7A686B121E8AD879005577AD /* ZUPMovieImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A686B111E8AD879005577AD /* ZUPMovieImageCell.m */; };
 		7A686B1F1E8AF614005577AD /* Movie+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A686B1D1E8AF614005577AD /* Movie+CoreDataProperties.m */; };
 		7A9A15C81E8E8EB2006714C8 /* ZUPMovieDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9A15C71E8E8EB2006714C8 /* ZUPMovieDAO.m */; };
+		7ACFAD911E8E9F8600D7EC52 /* ZUPMyMoviesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACFAD901E8E9F8600D7EC52 /* ZUPMyMoviesController.m */; };
+		7ACFAD941E8EA48C00D7EC52 /* MovieDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ACFAD931E8EA48C00D7EC52 /* MovieDetails.storyboard */; };
 		7AD3364C1E8D8A95006C8075 /* MyMovies.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AD3364B1E8D8A95006C8075 /* MyMovies.storyboard */; };
 		7AD3364E1E8D8B9C006C8075 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AD3364D1E8D8B9C006C8075 /* Settings.storyboard */; };
 /* End PBXBuildFile section */
@@ -104,6 +106,9 @@
 		7A686B1D1E8AF614005577AD /* Movie+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Movie+CoreDataProperties.m"; sourceTree = "<group>"; };
 		7A9A15C61E8E8EB2006714C8 /* ZUPMovieDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZUPMovieDAO.h; sourceTree = "<group>"; };
 		7A9A15C71E8E8EB2006714C8 /* ZUPMovieDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZUPMovieDAO.m; sourceTree = "<group>"; };
+		7ACFAD8F1E8E9F8600D7EC52 /* ZUPMyMoviesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZUPMyMoviesController.h; sourceTree = "<group>"; };
+		7ACFAD901E8E9F8600D7EC52 /* ZUPMyMoviesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZUPMyMoviesController.m; sourceTree = "<group>"; };
+		7ACFAD931E8EA48C00D7EC52 /* MovieDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MovieDetails.storyboard; sourceTree = "<group>"; };
 		7AD3364B1E8D8A95006C8075 /* MyMovies.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyMovies.storyboard; sourceTree = "<group>"; };
 		7AD3364D1E8D8B9C006C8075 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -220,6 +225,7 @@
 			children = (
 				7A686B081E8AD7D9005577AD /* Movie Details */,
 				7A686B071E8AD7D1005577AD /* Movie Search */,
+				7ACFAD921E8E9F8A00D7EC52 /* Movie Saved */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -233,6 +239,7 @@
 				7A686A811E895CEB005577AD /* Main.storyboard */,
 				7AD3364B1E8D8A95006C8075 /* MyMovies.storyboard */,
 				7AD3364D1E8D8B9C006C8075 /* Settings.storyboard */,
+				7ACFAD931E8EA48C00D7EC52 /* MovieDetails.storyboard */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -331,6 +338,15 @@
 				7A9A15C71E8E8EB2006714C8 /* ZUPMovieDAO.m */,
 			);
 			name = DAO;
+			sourceTree = "<group>";
+		};
+		7ACFAD921E8E9F8A00D7EC52 /* Movie Saved */ = {
+			isa = PBXGroup;
+			children = (
+				7ACFAD8F1E8E9F8600D7EC52 /* ZUPMyMoviesController.h */,
+				7ACFAD901E8E9F8600D7EC52 /* ZUPMyMoviesController.m */,
+			);
+			name = "Movie Saved";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,6 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AD3364C1E8D8A95006C8075 /* MyMovies.storyboard in Resources */,
+				7ACFAD941E8EA48C00D7EC52 /* MovieDetails.storyboard in Resources */,
 				7A686AC81E898C77005577AD /* ZUPMoviesCell.xib in Resources */,
 				7A686A8B1E895CEB005577AD /* LaunchScreen.storyboard in Resources */,
 				7AD3364E1E8D8B9C006C8075 /* Settings.storyboard in Resources */,
@@ -495,6 +512,7 @@
 			files = (
 				7A686AD51E8992D8005577AD /* ZUPMovieBusinessService.m in Sources */,
 				7A686AC71E898C77005577AD /* ZUPMoviesCell.m in Sources */,
+				7ACFAD911E8E9F8600D7EC52 /* ZUPMyMoviesController.m in Sources */,
 				7A686A861E895CEB005577AD /* ZupObjc.xcdatamodeld in Sources */,
 				7A686A7D1E895CEB005577AD /* AppDelegate.m in Sources */,
 				7A686B1F1E8AF614005577AD /* Movie+CoreDataProperties.m in Sources */,
