@@ -26,5 +26,6 @@
 @property (nonatomic) NSNumber <Optional> *imdbRating;
 @property (nonatomic) NSNumber <Optional> *imdbVotes;
 @property (nonatomic) NSString <Optional> *poster;
+@property (nonatomic) NSData <Optional> *posterData;
 
 @end

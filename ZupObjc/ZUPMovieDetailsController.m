@@ -11,6 +11,7 @@
 #import "ZUPMovieImageCell.h"
 #import "ZUPMovieBusinessService.h"
 #import "ZUPMovie.h"
+#import "ZUPMovieDAO.h"
 
 @interface ZUPMovieDetailsController ()
 
@@ -98,6 +99,19 @@
         }
         
     }];
+}
+
+#pragma mark - Actions
+
+- (IBAction)saveMovie:(id)sender {
+    
+    self.movie.posterData = UIImagePNGRepresentation(self.moviePoster);
+    [ZUPMovieDAO saveMovie:self.movie];
+    
+}
+
+- (IBAction)dropMovie:(id)sender {
+        
 }
 
 @end

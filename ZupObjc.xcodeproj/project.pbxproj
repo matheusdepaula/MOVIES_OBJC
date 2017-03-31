@@ -28,6 +28,7 @@
 		7A686B0F1E8AD869005577AD /* ZUPMovieDetailsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A686B0E1E8AD869005577AD /* ZUPMovieDetailsCell.m */; };
 		7A686B121E8AD879005577AD /* ZUPMovieImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A686B111E8AD879005577AD /* ZUPMovieImageCell.m */; };
 		7A686B1F1E8AF614005577AD /* Movie+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A686B1D1E8AF614005577AD /* Movie+CoreDataProperties.m */; };
+		7A9A15C81E8E8EB2006714C8 /* ZUPMovieDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9A15C71E8E8EB2006714C8 /* ZUPMovieDAO.m */; };
 		7AD3364C1E8D8A95006C8075 /* MyMovies.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AD3364B1E8D8A95006C8075 /* MyMovies.storyboard */; };
 		7AD3364E1E8D8B9C006C8075 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AD3364D1E8D8B9C006C8075 /* Settings.storyboard */; };
 /* End PBXBuildFile section */
@@ -101,6 +102,8 @@
 		7A686B1B1E8AF614005577AD /* Movie+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Movie+CoreDataClass.m"; sourceTree = "<group>"; };
 		7A686B1C1E8AF614005577AD /* Movie+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Movie+CoreDataProperties.h"; sourceTree = "<group>"; };
 		7A686B1D1E8AF614005577AD /* Movie+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Movie+CoreDataProperties.m"; sourceTree = "<group>"; };
+		7A9A15C61E8E8EB2006714C8 /* ZUPMovieDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZUPMovieDAO.h; sourceTree = "<group>"; };
+		7A9A15C71E8E8EB2006714C8 /* ZUPMovieDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZUPMovieDAO.m; sourceTree = "<group>"; };
 		7AD3364B1E8D8A95006C8075 /* MyMovies.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyMovies.storyboard; sourceTree = "<group>"; };
 		7AD3364D1E8D8B9C006C8075 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -276,6 +279,7 @@
 			children = (
 				7A686A841E895CEB005577AD /* ZupObjc.xcdatamodeld */,
 				7A686B191E8AF55E005577AD /* Entity */,
+				7A9A15C91E8E8EB7006714C8 /* DAO */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -318,6 +322,15 @@
 				7A686B1D1E8AF614005577AD /* Movie+CoreDataProperties.m */,
 			);
 			name = Entity;
+			sourceTree = "<group>";
+		};
+		7A9A15C91E8E8EB7006714C8 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				7A9A15C61E8E8EB2006714C8 /* ZUPMovieDAO.h */,
+				7A9A15C71E8E8EB2006714C8 /* ZUPMovieDAO.m */,
+			);
+			name = DAO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -491,6 +504,7 @@
 				7A686B0B1E8AD7F5005577AD /* ZUPMovieDetailsController.m in Sources */,
 				7A686B121E8AD879005577AD /* ZUPMovieImageCell.m in Sources */,
 				7A686B0F1E8AD869005577AD /* ZUPMovieDetailsCell.m in Sources */,
+				7A9A15C81E8E8EB2006714C8 /* ZUPMovieDAO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

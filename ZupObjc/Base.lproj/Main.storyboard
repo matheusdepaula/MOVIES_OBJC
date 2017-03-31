@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -130,8 +129,16 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Movie Title" id="kFF-dT-PuO">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="save" id="7RC-8E-JaZ"/>
-                            <barButtonItem systemItem="trash" id="ob1-il-uEm"/>
+                            <barButtonItem image="ic_save" id="7RC-8E-JaZ">
+                                <connections>
+                                    <action selector="saveMovie:" destination="amy-Ti-98D" id="V9M-20-VLo"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="ic_delete" id="ob1-il-uEm">
+                                <connections>
+                                    <action selector="dropMovie:" destination="amy-Ti-98D" id="d0f-dY-afR"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                 </tableViewController>
@@ -145,6 +152,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Rgw-pP-fDq" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="i73-2N-vSr">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -180,8 +188,10 @@
     </scenes>
     <resources>
         <image name="batman_poster" width="300" height="444"/>
+        <image name="ic_delete" width="24" height="24"/>
         <image name="ic_face" width="24" height="24"/>
         <image name="ic_home" width="24" height="24"/>
+        <image name="ic_save" width="24" height="24"/>
         <image name="ic_settings" width="24" height="24"/>
     </resources>
 </document>
