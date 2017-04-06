@@ -134,6 +134,16 @@
         } else {
             
             UIAlertController *alertError = [UIAlertController alertControllerWithTitle:@"Erro" message:error preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction *okButton = [UIAlertAction
+                                        actionWithTitle:@"Ok"
+                                        style:UIAlertActionStyleDefault
+                                        handler:^(UIAlertAction * action) {
+
+                                        }];
+            
+            [alertError addAction:okButton];
+            
             [self presentViewController:alertError animated:YES completion:nil];
             
         }
