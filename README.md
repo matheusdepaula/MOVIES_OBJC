@@ -1,4 +1,4 @@
-# ZUP_OBJC
+# MOVIES_OBJC
 Mobile Challenge
 
 Pré-requisitos:
